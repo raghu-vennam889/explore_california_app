@@ -1,4 +1,4 @@
-Steps Foloowed:
+Steps Followed:
 
 --> Kubernetes runtime setup :
     - Installed minikube and dependent resources 
