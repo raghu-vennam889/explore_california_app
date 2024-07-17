@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tourapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tourapp
+  template:
+    metadata:
+      labels:
+        app: tourapp
+    spec:
+      restartPolicy: Always            # Always, OnFailure, Never
+      containers:
+      - name: tourapp
+        image: raghuram889/explore_california:v1
+        #imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 1Gi
