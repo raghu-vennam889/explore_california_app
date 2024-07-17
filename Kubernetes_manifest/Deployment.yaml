@@ -12,11 +12,10 @@ spec:
       labels:
         app: tourapp
     spec:
-      restartPolicy: Always            # Always, OnFailure, Never
+      restartPolicy: Always            
       containers:
       - name: tourapp
         image: raghuram889/explore_california:v1
-        #imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
         ports:
         - containerPort: 80
         resources:
